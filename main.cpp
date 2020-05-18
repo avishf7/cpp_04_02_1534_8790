@@ -108,7 +108,7 @@ int main(void) {
 			cout << endl << "B to A: ";
 			try
 			{
-				cout << a.insert(index, b.getString());
+				cout << "\"" << a.insert(index, b.getString()) << "\"" << endl;
 			}
 			catch (IndexException exp)
 			{
@@ -118,7 +118,7 @@ int main(void) {
 			cout << endl << "A to B: ";
 			try
 			{
-				cout << b.insert(index, a.getString());
+				cout << "\"" << b.insert(index, a.getString()) << "\"" << endl;
 			}
 			catch (IndexException exp)
 			{
@@ -130,7 +130,7 @@ int main(void) {
 
 			cout << endl;
 			try {
-				cout << "B appears first time in A from index - " << a[b] << endl;
+				cout << "B appears first time in A from index - [" << a[b] << "]" << endl;
 			}
 			catch (void*)
 			{
