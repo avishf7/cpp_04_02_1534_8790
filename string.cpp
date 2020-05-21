@@ -8,7 +8,7 @@ Students: eli iluz 311201354
 */
 
 #include <cstring>
-#include "String.h"
+#include "string.h"
 #include "IndexExeption.h"
 #pragma warning( disable : 4996)
 
@@ -141,7 +141,7 @@ String operator*(String lhs, unsigned int rhs) {
 	return lhs; // return by value - it will use Move Ctor
 }
 
-ostream& operator<<(ostream& out, String& output)
+ostream& operator<<(ostream& out, const String& output)
 {
 	if (output.str != nullptr)
 		out << output.str;
@@ -150,7 +150,7 @@ ostream& operator<<(ostream& out, String& output)
 	return out;
 }
 
-std::istream& operator>>(std::istream& in, String& input)
+istream& operator>>(std::istream& in, String& input)
 {
 	char temp[101];  //assumes that the input string not bigger than 100 letters
 

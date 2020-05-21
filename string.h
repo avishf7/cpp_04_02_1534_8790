@@ -38,7 +38,7 @@ public:
 	friend String operator + (String, const String&); // Symmetric addition as friend
 	String& operator *= (unsigned int);     // Multiplication by replicating
 	friend String operator * (String, unsigned int);  // Symmetric multiplication as friend
-	friend std::ostream& operator << (std::ostream& out, String&); //input operator
+	friend std::ostream& operator << (std::ostream& out,const String&); //output operator
 	friend std::istream& operator >> (std::istream& in, String&); //input operator
 	// gets a c - string for index
 	// return the index of the first letter of the the first appearance
@@ -55,7 +55,7 @@ public:
 	void print() const; // Print the string
 };
 
-std::ostream& operator << (std::ostream& out, String&);
+std::ostream& operator << (std::ostream& out,const String&);
 String operator + (String, const String&); // Declaration of addition operator (global)
 String operator * (String, unsigned int);  // Declaration of mulitiplication oeprator (global)
 
