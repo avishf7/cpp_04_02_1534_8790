@@ -8,7 +8,7 @@ Students: eli iluz 311201354
 */
 #include <iostream>
 #include <iomanip>
-#include "string.h"
+#include "String.h"
 #include "indexExeption.h"
 
 
